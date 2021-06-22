@@ -1,0 +1,16 @@
+# Lhun's Algorithm
+    - Used to validate a credit card 
+    - Great for Ecommerce abilities
+
+# How do we validate a CC
+    -Say we have a cc number
+        5610 5910 8101 8250
+        -We assign an index number for each
+        -Extract the sum of all Odd numbers in the CC number
+        -Find the double of all even numbers
+            -if the double is a double digit number, add them together
+                -ex 10 = 1+0 = 1
+            -Find sum of all the index'sum
+        -Add the odd sum and even sum
+        -Divide by 10
+            -if the remainder is 0 = Valid if !0 = not valid
