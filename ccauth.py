@@ -15,12 +15,30 @@
 card_num = "5610591081018250"
 odd_sum = 0
 even_sum = 0
+ccsum = 0
+double_list = []
+double_string = ""
+
 number = list(card_num)
 
 for (idx,val) in enumerate(number):
-    if idx % 2 !=0:
+    if idx % 2 !=0: #odd
         odd_sum += int(val)
-    else:
-        pass
+    else: #even
+        double_list.append(int(val)*2)
 
-print(odd_sum)
+for x in double_list:
+    double_string += str(x)
+
+new_double = list(double_string)
+
+for x in new_double:
+    even_sum += int(x)
+
+ccsum = odd_sum + even_sum
+if ccsum % 10 == 0:
+    print("Card Validated!")
+else:
+    print("Invalid Card Data")
+
+
